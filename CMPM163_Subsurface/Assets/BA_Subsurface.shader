@@ -4,6 +4,7 @@
     {
         _MainTex ("Texture", 2D) = "white" {}
 		_Color ("Color", Color) = (1, 1, 1, 1)
+		_SubLight ("Passthrough", Color) = (0.6, 0.8, 0.9, 1)
 		_Ambience("Ambience", Color) = (1, 1, 1, 1)
 		_Shininess("Shininess", Float) = 10 //Shininess
     }
@@ -15,7 +16,7 @@
         Pass
         {
 			Tags { "LightMode" = "ForwardAdd" }
-			Blend One One
+			//Blend One One
 
             CGPROGRAM
             #pragma vertex vert
@@ -28,6 +29,7 @@
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			uniform float4 _Color;
+			uniform float4 _SubLight;
 			uniform float4 _Ambience;
 			uniform float _Shininess;
 
@@ -69,21 +71,26 @@
 				// AMBIENT
 				float3 ambient = _Ambience;
 
-				// DIFFUSE 
-				float diffuseVal = max(dot(N, L), 0);
-				float3 diffuse = _LightColor0.rgb * _Color.rgb * diffuseVal;
+				// DIFFUSE
+				float ndotl = dot(N, L);
+				float3 diffuse;
+				if (ndotl > 0)
+					diffuse = _LightColor0.rgb * _Color.rgb * ndotl;
+				else
+					diffuse = (_LightColor0.rgb * _SubLight) * _Color.rgb * abs(dot(V, L));
+				
 
 				//SPECULAR LIGHT
 				float specularVal = pow(max(dot(N, H), 0), _Shininess);
 
-				if (diffuseVal <= 0) {
+				if (ndotl <= 0) {
 					specularVal = 0;
 				}
 
 				float3 specular = float3(0, 0, 0) * _LightColor0.rgb * specularVal;
 
                 fixed4 col = tex2D(_MainTex, i.uv);
-				return float4(ambient + diffuse + specular, 1.0);
+				return float4(diffuse, 1.0) * col;
 			}
             ENDCG
         }

@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _DepthMask:
+        m_Texture: {fileID: 2800000, guid: 5f456bbac89935d4a8c2f0b2c23577f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 3b8d65f128cc7484a9c14ba4d91ea50d, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -27,12 +31,13 @@ Material:
     - _AO: 0.35
     - _BaseLight: 0.352
     - _Cutoff: 0.25
-    - _Distortion: 0.2
+    - _DepthStr: 2
+    - _Distortion: 0.5
     - _Glossiness: 0
     - _Metallic: 0
     - _Occlusion: 0.4
     - _Power: 2
-    - _Scale: 0.4
+    - _Scale: 0.2
     - _ShadowStrength: 1
     - _Shininess: 0.078125
     - _SquashAmount: 1

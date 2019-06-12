@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ast4
-  m_Shader: {fileID: 10511, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: c8c8ee62e56ed984a98869d87a902c17, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -26,14 +26,19 @@ Material:
     m_Floats:
     - _AO: 0.35
     - _BaseLight: 0.352
-    - _Cutoff: 0.29642856
+    - _Cutoff: 0.25
+    - _Distortion: 0.2
+    - _Glossiness: 0
+    - _Metallic: 0
     - _Occlusion: 0.4
+    - _Power: 2
+    - _Scale: 0.4
     - _ShadowStrength: 1
     - _Shininess: 0.078125
     - _SquashAmount: 1
     - _TranslucencyViewDependency: 0.7
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.7528302, g: 1, b: 0.3820755, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}

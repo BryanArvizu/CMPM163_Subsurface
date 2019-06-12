@@ -1,4 +1,4 @@
-﻿Shader "Unlit/BA_Subsurface"
+﻿Shader "Custom/BA_Subsurface"
 {
     Properties
     {

@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ast4
   m_Shader: {fileID: 4800000, guid: c8c8ee62e56ed984a98869d87a902c17, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -31,19 +31,19 @@ Material:
     - _AO: 0.35
     - _BaseLight: 0.352
     - _Cutoff: 0.25
-    - _DepthStr: 2
+    - _DepthStr: 1
     - _Distortion: 0.5
     - _Glossiness: 0
     - _Metallic: 0
     - _Occlusion: 0.4
     - _Power: 2
-    - _Scale: 0.2
+    - _Scale: 2
     - _ShadowStrength: 1
     - _Shininess: 0.078125
     - _SquashAmount: 1
     - _TranslucencyViewDependency: 0.7
     m_Colors:
-    - _Color: {r: 0.7528302, g: 1, b: 0.3820755, a: 1}
+    - _Color: {r: 1, g: 0.048432413, b: 0, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
